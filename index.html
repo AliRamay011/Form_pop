@@ -1,110 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=SUSE:wght@100..800&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body>
-    <div class="bg">
-        <div class="flex">
-        <div class="input-div">
-            <h2 class="sing">Sign Up</h2>
-            <p class="para">just Now</p>
-            <label for="">Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter Your Name"> <br>
-            <label for="">Email</label>
+    <body>
+        <div class="bg">
+            <div class="flex">
+            <div class="input-div">
+                <h2 class="sing">Sign Up</h2>
+                <p class="para">just Now</p>
+                <label for="">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name"> <br>
+                <label for="">Email</label>
 
-            <input type="email" name="email" id="email" placeholder="Enter Your Email"> <br>
-            <label for="">Password</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email"> <br>
+                <label for="">Password</label>
 
-            <input type="password" name="password" id="password" placeholder="Enter Your Email"> <br>
-            <label for="">Number</label>
+                <input type="password" name="password" id="password" placeholder="Enter Your Email"> <br>
+                <label for="">Number</label>
 
-            <input type="number" name="number" id="number" placeholder="Enter Your Numbr">
+                <input type="number" name="number" id="number" placeholder="Enter Your Numbr">
 
-            <button class="btn" onclick="Submit()">Submit</button><br>
-            <button class="btn1" onclick="shift()">Remove Start</button>
-            <button class="btn1" onclick="pop()">Remove End</button>
+                <button class="btn" onclick="Submit()">Submit</button><br>
+                <button class="btn1" onclick="shift()">Remove Start</button>
+                <button class="btn1" onclick="pop()">Remove End</button>
+            </div>
+            <div id="output">
+                <h4 class="show">Show Output Detail</h4>
+            </div>
         </div>
-        <div id="output">
-             <h4 class="show">Show Output Detail</h4>
         </div>
-    </div>
-    </div>
 
 
 
+    <script src="java.js"></script>
+    
+    </body>
 
-    <script>
-        let Name =[];
-        let myEmail =[];
-        let Password =[];
-        let Number =[];
- 
-        function Submit() {
-             let FullName =document.getElementById('name').value;
-             let ForEmail =document.getElementById('email').value;
-             let ForPassword =document.getElementById('password').value;
-             let ForNumber =document.getElementById('number').value;
-
-             Name.push(FullName);
-             myEmail.push(ForEmail);
-             Password.push(ForPassword);
-             Number.push(ForNumber);
-             
-           var showText =  document.getElementById('output')
-           showText.innerHTML =`
-           <h2 class='show'>OutPut details</h2>
-             <p class='para1'> <b>Full Name:</b> ${Name}</p>
-             <p class='para1'> <b>Email:</b> ${myEmail}</p>
-             <p class='para1'> <b>PassWord:</b> ${Password}</p>
-             <p class='para1'> <b>Number:</b> ${Number}</p>
-              <h2 class='show1'>Design By Ali Hassan ||Roll No :254037 </h2>
-             `
-        }
-        function shift(){
-            Name.shift()
-            myEmail.shift()
-            Password.shift()
-            Number.shift()
-
-            var showText =  document.getElementById('output')
-           showText.innerHTML =`
-           <h2 class='show'>OutPut details</h2>
-             <p class='para1'> <b>Full Name:</b> ${Name}</p>
-             <p class='para1'> <b>Email:</b> ${myEmail}</p>
-             <p class='para1'> <b>PassWord:</b> ${Password}</p>
-             <p class='para1'> <b>Number:</b> ${Number}</p>
-              <h2 class='show1'>Design By Ali Hassan ||Roll No :254037 </h2>
-             <p></p>
-             `
-        }
-        function pop(){
-            Name.pop()
-            myEmail.pop()
-            Password.pop()
-            Number.pop()
-
-            var showText =  document.getElementById('output')
-           showText.innerHTML =`
-           <h2 class='show'>OutPut details</h2>
-             <p class='para1'> <b>Full Name:</b> ${Name}</p>
-             <p class='para1'> <b>Email:</b> ${myEmail}</p>
-             <p class='para1'> <b>PassWord:</b> ${Password}</p>
-             <p class='para1'> <b>Number:</b> ${Number}</p>
-             <h2 class='show1'>Design By Ali Hassan ||Roll No :254037 </h2>
-             `
-        }
-
-    </script>
-</body>
-
-</html>
+    </html>
